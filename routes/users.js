@@ -1,9 +1,15 @@
 var express = require('express');
 var router = express.Router();
-const { index } = require('../controllers/usersController');
+const userController = require('../controllers/usersController');
 
 /* GET users listing. */
-router.get('/', index);
+router.get('/', userController.index);
+
+router.post('/', userController.create);
+
+router.put('/', userController.update);
+
+router.delete('/', userController.supprimer);
 
 router.get('/about', function(req, res, next) {
   res.send('about users');

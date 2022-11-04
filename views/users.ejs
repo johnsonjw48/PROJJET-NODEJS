@@ -1,28 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><%= title %></title>
+    <title>>test</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
-    <h1><%= title %></h1>
-    <table>
-        <thead>
-        <tr>
-            <th colspan="2">Nom</th>
-            <th colspan="2">Age</th>
-            <th colspan="2">Ville</th>
-        </tr>
-        </thead>
-        <tbody>
-            <% for (var i = 0; i < reports.length; i++) { %>
-                <tr>
-                    <td><%= title %></td>
-                    <td>w<%= title %></td>
-                    <td><%= title %></td>
-                </tr>
-            <% } %>
-        </tbody>
-    </table>
+    <h1>Users</h1>
+    <ul>
+        <% users.forEach(user => { %>
+            <li> Nom: <%= user.name  %> </li>
+            <li> Age: <%= user.age  %> </li>
+            <li> Ville: <%= user.city  %> </li>
+        <% }) %>
+    </ul>
 </body>
 </html>
